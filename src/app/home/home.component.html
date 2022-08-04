@@ -1,0 +1,24 @@
+<div class="container sm-5">
+  <div class="jumbotron text-center">
+    <div class="card">
+      <h3 class="titulo mb-3">Multiplos de 3,5 y 7</h3>
+      <h5 class="titulo mb-3">Encontrar si el numero ingresado es multiplo de 3,5 y 7</h5>
+      <form [formGroup]="form" (ngSubmit)="consultarNumero()">
+        <div class="input-group input-group-lg mb-3">
+          <span class="input-goup-text"> </span>
+          <input type="number" formControlName="numeroMultiplo" class="form-control" placeholder="ingrese numero" />
+        </div>
+
+        <div class="d-grid grap-2">
+          <button class="btn btn-success btn-lg" type="submit">Enviar</button>
+        </div>
+      </form>
+
+      <div>
+        <span [ngStyle]="{color}">
+          <h3>{{ result }}</h3>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
